@@ -1,19 +1,23 @@
 import Header from "./Component/header";
+import RenderPostList from "./Component/RenderPostList/index.js";
 import "./App.css";
 import { useState, useEffect } from "react";
 import PostEditSection from "./Component/PostEditSection";
 import GifState from "./Context/GifState";
 import Getgifs from "./Component/Getgifs";
+import Footer from "./Component/Footer/index";
 
 function App() {
   const [gifState, changeGifState] = useState(false);
+  const [userinput, changeInput] = useState("");
   const [gifImg, changeGifImg] = useState("");
   const [imgState, imgchangeState] = useState(false);
-  console.log(gifState);
-  console.log(gifImg);
+  const [postedItem, changePostedItem] = useState([]);
+
   useEffect(() => {
     console.log(gifImg);
-  }, [gifState, imgState]);
+  }, [gifState, imgState, userinput]);
+  console.log(postedItem);
   return (
     <GifState.Provider
       value={{
@@ -23,17 +27,23 @@ function App() {
         changeGifImg: changeGifImg,
         imgState,
         imgchangeState: imgchangeState,
+        userinput,
+        changeInput: changeInput,
+        postedItem,
+        changePostedItem: changePostedItem
       }}
     >
       <Header />
 
       <PostEditSection />
-
+      <Footer />
       {gifState ? (
         <div className="get-gifs">
           <Getgifs />
         </div>
-      ) : null}
+      ) : (
+        <RenderPostList />
+      )}
     </GifState.Provider>
   );
 }

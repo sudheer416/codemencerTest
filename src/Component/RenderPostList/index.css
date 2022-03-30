@@ -1,0 +1,28 @@
+.post-listed {
+  background-color: rgb(202, 208, 209);
+  background-size: cover;
+  border: 1px solid;
+}
+.item-card {
+  background-size: cover;
+
+  width: 100%;
+}
+.line {
+  color: rgb(138, 3, 48);
+  height: 2px;
+}
+.profile-img {
+  height: 1%;
+  width: 5%;
+}
+.user-name {
+}
+.user-section {
+  display: flex;
+}
+
+.post-img {
+  height: 30%;
+  width: 30%;
+}

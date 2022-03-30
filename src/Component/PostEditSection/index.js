@@ -6,7 +6,14 @@ import Footer from "../Footer";
 
 import Getgifs from "../Getgifs";
 const PostEditSection = () => {
-  const { gifState, changeGifState, gifImg, imgState } = useContext(GifState);
+  const {
+    gifState,
+    changeGifState,
+    gifImg,
+    imgState,
+    userinput,
+    changeInput
+  } = useContext(GifState);
 
   const renderColorBoxes = () => {
     return (
@@ -26,6 +33,10 @@ const PostEditSection = () => {
   };
 
   const ComposePost = () => {
+    const changingInput = (e) => {
+      changeInput(e.target.value);
+    };
+
     return (
       <div className="input-section">
         <img
@@ -37,7 +48,9 @@ const PostEditSection = () => {
         <input
           className="input-box"
           type="input"
+          value={userinput}
           placeholder="Enter Something....."
+          onChange={changingInput}
         />
       </div>
     );
@@ -90,7 +103,6 @@ const PostEditSection = () => {
       {ComposePost()}
       {imgState ? renderGifImg() : renderColorBoxes()}
       {renderOptionButton()}
-      <Footer />
     </div>
   );
 };

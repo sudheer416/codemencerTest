@@ -12,7 +12,8 @@ select {
 .btn-post {
   background-color: rgb(11, 101, 179);
   border-radius: 2px;
-  width: 20%;
+
+  padding: 5px;
   margin-left: 1%;
 }
 
@@ -26,4 +27,7 @@ select {
 .getgifs {
   width: 100%;
   padding-left: 10%;
+}
+.btn-onlyme {
+  display: flex;
 }
