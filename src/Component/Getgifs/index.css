@@ -1,0 +1,29 @@
+.gif_div {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  height: 300px;
+
+  border: solid;
+  background-color: white;
+  background-color: cover;
+}
+
+input {
+  width: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+.img {
+  height: 50%;
+  width: 100%;
+}
+.gif-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100%;
+}
+@media screen {
+}
