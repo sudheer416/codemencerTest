@@ -3,8 +3,6 @@ import GifState from "../../Context/GifState";
 import "./index.css";
 const Footer = () => {
   const {
-    gifState,
-    changeGifState,
     gifImg,
     changeGifImg,
     imgState,
@@ -26,6 +24,8 @@ const Footer = () => {
 
       const item = { text: userinput, imgUrl: gifImg };
       changePostedItem([...postedItem, item]);
+    } else {
+      alert(" Please Enter Text Something");
     }
     changeInput("");
     console.log(userinput);
@@ -36,7 +36,7 @@ const Footer = () => {
       <div className="footer">
         <div className="submit-section">
           <button className=" btn-onlyme">
-            <i class="lock icon"></i>
+            <i className="lock icon"></i>
             <select>
               <option>Only me</option>
             </select>

@@ -5,19 +5,19 @@ const Header = () => (
     <div className="add-post-header">
       <div>
         <button className="btn">
-          <i class="pencil alternate icon"></i>
+          <i className="pencil alternate icon"></i>
           Compose Post
         </button>
         <button>
-          <i class="images icon"></i>
+          <i className="images icon"></i>
           Photo/Video Album
         </button>
         <button>
-          <i class="video icon"></i>Live Video
+          <i className="video icon"></i>Live Video
         </button>
       </div>
       <button className="">
-        <i class=" close icon"></i>
+        <i className=" close icon"></i>
       </button>
     </div>
   </>

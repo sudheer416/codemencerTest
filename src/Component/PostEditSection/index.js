@@ -2,9 +2,6 @@ import { useContext } from "react";
 import "./index.css";
 import GifState from "../../Context/GifState";
 
-import Footer from "../Footer";
-
-import Getgifs from "../Getgifs";
 const PostEditSection = () => {
   const {
     gifState,
@@ -62,10 +59,10 @@ const PostEditSection = () => {
         <div className="container">
           <div className="button-up">
             <button className="btn-option">
-              <i class="user plus icon"></i>Tag friends
+              <i className="user plus icon"></i>Tag friends
             </button>
             <button className="btn-option">
-              <i class="map marker alternate icon"></i>Check In
+              <i className="map marker alternate icon"></i>Check In
             </button>
           </div>
           <div className="button-up">
@@ -82,7 +79,7 @@ const PostEditSection = () => {
             </button>
 
             <button className="btn-option">
-              <i class="calendar alternate icon "></i>Tag Event
+              <i className="calendar alternate icon "></i>Tag Event
             </button>
           </div>
         </div>

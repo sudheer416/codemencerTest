@@ -1,4 +1,4 @@
-import Header from "./Component/header";
+import Header from "./Component/Header";
 import RenderPostList from "./Component/RenderPostList/index.js";
 import "./App.css";
 import { useState, useEffect } from "react";
@@ -14,9 +14,7 @@ function App() {
   const [imgState, imgchangeState] = useState(false);
   const [postedItem, changePostedItem] = useState([]);
 
-  useEffect(() => {
-    console.log(gifImg);
-  }, [gifState, imgState, userinput]);
+  useEffect(() => {}, [gifState, imgState, userinput]);
   console.log(postedItem);
   return (
     <GifState.Provider
